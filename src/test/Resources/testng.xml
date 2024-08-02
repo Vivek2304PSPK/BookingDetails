@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BookingSuite">
+    <listeners><listener class-name="Listeners.CustomListeners"></listener></listeners>
+    <test name="BookingTest">
+        <!-- Create the booking and pass the booking ID as a parameter -->
+        <classes>
+            <class name="BookingId.CreateBookingId">
+                <methods>
+                    <include name="createBookingIdFromFile"/>
+                </methods>
+            </class>
+            <class name="BookingId.GetBookingId">
+                <methods>
+                    <include name="testGetBooking"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
